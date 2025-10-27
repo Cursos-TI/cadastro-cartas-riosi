@@ -24,6 +24,10 @@ int main() {
     float pibDois;
     int pontosTuristicosUm;
     int pontosTuristicosDois;
+    float densidadePopUm;
+    float densidadePopDois;
+    float pibPerCaptaUm;
+    float pibPerCaptaDois;
 
 
     printf("Carta 1 \n"); // número da carta
@@ -50,6 +54,9 @@ int main() {
     printf("Digite a quantidade de pontos turísticos que existem na cidade: \n"); 
     scanf("%d", &pontosTuristicosUm);
 
+    densidadePopUm = (float) habitantesUm / areaUm;
+    pibPerCaptaUm = (pibUm * 1000000000.0) / (float) habitantesUm;
+
     printf("\nCarta 2 \n");
     printf("Digite uma letra de 'A' a 'H' para representar o estado escolhido:\n");
     getchar();
@@ -75,15 +82,20 @@ int main() {
     printf("Digite a quantidade de pontos turísticos que existem na cidade: \n"); 
     scanf("%d", &pontosTuristicosDois);
 
+    densidadePopDois = (float) habitantesDois / areaDois;
+    pibPerCaptaDois = (pibDois * 1000000000.0) / (float) habitantesDois;
+
     printf("\n\n");
     printf("Carta 1:\n");
     printf("Estado: %c\n", estadoUm);
     printf("Código: %c%s\n", estadoUm, CodCardUm); // mostra a saída estado + código juntas, ex.: B01
     printf("Nome da Cidade: %s\n", nomeCidadeUm);
     printf("População: %d\n", habitantesUm);
-    printf("Área: %2.3f km²\n", areaUm);
-    printf("PIB: %.3f bilhões de reais\n", pibUm);
+    printf("Área: %.2f km²\n", areaUm);
+    printf("PIB: %.2f bilhões de reais\n", pibUm);
     printf("Número de Pontos Turísticos: %d\n", pontosTuristicosUm); 
+    printf("Densidade Populacional: %.2f hab/km²\n", densidadePopUm);
+    printf("PIB per Capita: %.2f reais\n", pibPerCaptaUm);
 
     printf("\n");
     printf("Carta 2:\n");
@@ -91,9 +103,11 @@ int main() {
     printf("Código: %c%s\n", estadoDois, CodCardDois);
     printf("Nome da Cidade: %s\n", nomeCidadeDois);
     printf("População: %d\n", habitantesDois);
-    printf("Área: %2.3f km²\n", areaDois);
-    printf("PIB: %.3f bilhões de reais\n", pibDois);
-    printf("Número de Pontos Turísticos: %d\n", pontosTuristicosDois); 
+    printf("Área: %.2f km²\n", areaDois);
+    printf("PIB: %.2f bilhões de reais\n", pibDois);
+    printf("Número de Pontos Turísticos: %d\n", pontosTuristicosDois);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidadePopDois);
+    printf("PIB per Capita: %.2f reais\n", pibPerCaptaDois);
   
   return 0;
 } 
